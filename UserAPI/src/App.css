@@ -1,0 +1,138 @@
+src/App.css
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #172033;
+}
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 8px 0;
+  font-size: clamp(30px, 5vw, 44px);
+}
+
+.header p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.header .eyebrow {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.search {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.count {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  padding: 24px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px #17203308;
+  overflow-wrap: anywhere;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.user-card h2 {
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+
+.username {
+  color: #64748b;
+  margin-top: 0;
+}
+
+.details {
+  border-top: 1px solid #e2e8f0;
+  margin-top: 18px;
+  padding-top: 10px;
+}
+
+.details p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.status {
+  text-align: center;
+  padding: 30px;
+}
+
+.error {
+  text-align: center;
+  color: #dc2626;
+}
+
+button {
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .user-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    padding: 28px 16px;
+  }
+}
